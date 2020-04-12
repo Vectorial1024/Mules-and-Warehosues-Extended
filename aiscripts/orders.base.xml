@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<diff>
+	<replace sel="/aiscript/attention/actions/do_if[contains(@value,'$object.isclass.ship')]/do_if/@value">
+		$object.order.trade or $object.order.build or ($object.order.id == 'StationMule') or ($object.order.id == 'TravelMule') or ($object.order.id == 'DistriMule') or ($object.order.id == 'DockAt') or ($object.order.id == 'DockAndWait') or ((($object.order.id == 'Wait') or ($object.order.id == 'WaitForSignal')) and $object.order.$allowdocked and not $object.iscapitalship) or (($object.order.id == 'WaitForSignal') and $object.order.$allowparked) or ($object.order.id == 'Repair') or ($object.order.id == 'Equip') or ($object.order.id == 'Escort') or ($object.order.id == 'Resupply' or $object.order.id == 'Player_DockToTrade') or ($object.order.id == 'AssignCommander') or ($object.order.id == 'DepositInventory')
+</replace>
+</diff>
